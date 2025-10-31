@@ -22,21 +22,14 @@ body[data-theme='day'] {
   --glass-border: rgba(74, 182, 169, 0.35);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--night-bg);
-  color: var(--text-primary);
-  min-height: 100%;
+html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  background: var(--night-bg);
+  color: var(--text-primary);
   background-image: radial-gradient(circle at top left, rgba(122, 214, 199, 0.25), transparent 50%),
     radial-gradient(circle at bottom right, rgba(74, 182, 169, 0.2), transparent 55%);
   transition: background 600ms ease, color var(--transition);
@@ -52,10 +45,16 @@ body[data-theme='day'] {
   transform: translateY(-30px) scale(0.96);
   pointer-events: none;
 }
-.toggle input {
-  accent-color: var(--sage-light);
+
+.atropos-hero .atropos-inner,
+.atropos-stage .atropos-inner {
+  pointer-events: auto;
 }
 
+.atropos-hero [data-atropos-offset],
+.atropos-stage [data-atropos-offset] {
+  pointer-events: auto;
+}
 .healing-ring {
   position: absolute;
   inset: 50% auto auto 50%;
