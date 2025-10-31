@@ -6,92 +6,236 @@
     <title>Sage's Healing Birthday</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'sage-light': '#7ad6c7',
+              'sage-mid': '#4ab6a9',
+              'sage-dark': '#1b4e4a',
+              'valorant-red': '#ff4655',
+            },
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              orbitron: ['Orbitron', 'sans-serif'],
+            },
+            boxShadow: {
+              valorant: '0 24px 60px rgba(10, 20, 25, 0.35)',
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/atropos@1.0.2/atropos.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/atropos@1.0.2/atropos.min.js" defer></script>
   </head>
-  <body data-theme="night">
+  <body data-theme="night" class="font-inter antialiased min-h-screen flex justify-center transition-colors duration-500">
     <header class="sr-only">
       <h1>Sage's Healing Birthday Protocol</h1>
     </header>
-    <main id="app" class="app" aria-live="polite">
-      <section class="hero" id="hero" aria-labelledby="hero-title">
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-          <span class="badge">SAGE // BIRTHDAY PROTOCOL</span>
-          <h2 id="hero-title">Chào mừng đến với trạm hồi máu sinh nhật</h2>
-          <p class="hero__tagline">
-            Kích hoạt giao thức để Sage chữa lành toàn bộ ngày đặc biệt này.
-          </p>
-          <button id="begin-btn" class="btn btn--primary" aria-controls="main-stage">
-            Begin Protocol
-          </button>
+    <main
+      id="app"
+      class="w-full max-w-[1100px] px-4 sm:px-8 lg:px-12 py-10 flex flex-col gap-10"
+      aria-live="polite"
+    >
+      <section
+        class="hero relative min-h-[70vh] md:min-h-[85vh] overflow-hidden rounded-[2.75rem] bg-gradient-to-br from-[#0f1115]/95 via-[#132328]/90 to-[#4ab6a9]/45 shadow-valorant transition-all duration-700 ease-out"
+        id="hero"
+        aria-labelledby="hero-title"
+      >
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#ff4655]/30 via-transparent to-[#7ad6c7]/40 mix-blend-screen opacity-80"></div>
+        <div class="atropos hero-atropos relative z-10 w-full px-6 sm:px-10">
+          <div class="atropos-scale">
+            <div class="atropos-rotate">
+              <div class="atropos-inner relative flex flex-col items-center gap-6 py-16 text-center">
+                <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+                  <div
+                    class="absolute top-10 left-8 h-48 w-40 -skew-y-12 rounded-[2.5rem] bg-gradient-to-br from-[#7ad6c7]/40 to-transparent blur-sm"
+                    data-atropos-offset="-6"
+                  ></div>
+                  <div
+                    class="absolute bottom-14 right-10 h-56 w-48 -skew-y-12 rounded-[2.5rem] bg-gradient-to-br from-[#0f1115]/60 via-transparent to-[#7ad6c7]/35 blur-sm"
+                    data-atropos-offset="-4"
+                  ></div>
+                </div>
+                <span
+                  class="inline-flex items-center justify-center px-5 py-1.5 text-xs font-orbitron tracking-[0.3em] uppercase border border-white/20 rounded-full bg-black/40 text-white/80"
+                  data-atropos-offset="6"
+                >
+                  SAGE // BIRTHDAY PROTOCOL
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-semibold leading-tight" id="hero-title" data-atropos-offset="8">
+                  Chào mừng đến với trạm hồi máu sinh nhật
+                </h2>
+                <p class="max-w-xl text-base text-white/80" data-atropos-offset="4">
+                  Kích hoạt giao thức để Sage chữa lành toàn bộ ngày đặc biệt này.
+                </p>
+                <button
+                  id="begin-btn"
+                  class="group inline-flex items-center justify-center rounded-full border border-transparent bg-gradient-to-r from-sage-mid to-sage-light px-10 py-3 font-semibold text-[#041111] shadow-lg shadow-sage-dark/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(10,20,25,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115]"
+                  aria-controls="main-stage"
+                  data-atropos-offset="10"
+                >
+                  Begin Protocol
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero__shapes" aria-hidden="true"></div>
       </section>
 
-      <section id="main-stage" class="stage" hidden aria-labelledby="stage-title" tabindex="-1">
-        <div class="stage__header">
-          <h2 id="stage-title">Main Stage</h2>
-          <div class="toggles">
-            <label class="toggle" for="theme-toggle">
-              <input type="checkbox" id="theme-toggle" aria-label="Đổi chế độ ngày/đêm" />
+      <section
+        id="main-stage"
+        class="grid gap-8 focus:outline-none animate-[fadeUp_0.7s_ease_forwards]"
+        hidden
+        aria-labelledby="stage-title"
+        tabindex="-1"
+      >
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 class="font-orbitron text-sm uppercase tracking-[0.35em] text-white/80" id="stage-title">Main Stage</h2>
+          <div class="flex flex-wrap items-center gap-3">
+            <label
+              class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
+              for="theme-toggle"
+            >
+              <input
+                type="checkbox"
+                id="theme-toggle"
+                aria-label="Đổi chế độ ngày/đêm"
+                class="accent-[#7ad6c7]"
+              />
               <span>Night / Day</span>
             </label>
-            <label class="toggle" for="audio-toggle">
-              <input type="checkbox" id="audio-toggle" aria-label="Bật hoặc tắt âm thanh" checked />
+            <label
+              class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
+              for="audio-toggle"
+            >
+              <input
+                type="checkbox"
+                id="audio-toggle"
+                aria-label="Bật hoặc tắt âm thanh"
+                checked
+                class="accent-[#7ad6c7]"
+              />
               <span>Âm thanh</span>
             </label>
-            <label class="toggle" for="motion-toggle">
-              <input type="checkbox" id="motion-toggle" aria-label="Giảm chuyển động" />
+            <label
+              class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
+              for="motion-toggle"
+            >
+              <input
+                type="checkbox"
+                id="motion-toggle"
+                aria-label="Giảm chuyển động"
+                class="accent-[#7ad6c7]"
+              />
               <span>Reduce Motion</span>
             </label>
           </div>
         </div>
 
-        <section class="hp" aria-label="Thanh HP sinh nhật">
-          <div class="hp__label">
+        <section
+          class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-inner shadow-black/30 transition"
+          aria-label="Thanh HP sinh nhật"
+        >
+          <div class="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.25em] text-white/70">
             <span>Birthday Day</span>
             <span class="hp__value" id="hp-value" aria-live="polite">0%</span>
           </div>
-          <div class="hp__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div class="hp__fill" id="hp-fill"></div>
+          <div
+            class="mt-3 h-3 w-full overflow-hidden rounded-full bg-white/20"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div
+              class="h-full w-0 rounded-full bg-gradient-to-r from-sage-mid to-sage-light transition-[width] duration-500 ease-out"
+              id="hp-fill"
+            ></div>
           </div>
         </section>
 
-        <section class="stage__grid" aria-label="Khu tương tác">
-          <article class="stage__panel stage__panel--avatar" aria-labelledby="avatar-title">
-            <h3 id="avatar-title">Đồng đội cần hồi máu</h3>
-            <img src="assets/sage-silhouette.svg" alt="Silhouette Sage" class="sage-avatar" />
+        <section class="grid gap-6 lg:grid-cols-12" aria-label="Khu tương tác">
+          <article
+            class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_32px_70px_rgba(0,0,0,0.45)]"
+            aria-labelledby="avatar-title"
+          >
+            <h3 class="font-orbitron text-sm uppercase tracking-[0.3em] text-white/80" id="avatar-title">Đồng đội cần hồi máu</h3>
+            <img
+              src="assets/sage-silhouette.svg"
+              alt="Silhouette Sage"
+              class="mx-auto mt-6 w-3/5 max-w-[240px] drop-shadow-[0_35px_25px_rgba(0,0,0,0.4)]"
+            />
             <div class="healing-ring" id="healing-ring" aria-hidden="true"></div>
-            <p class="stage__panel-text">
-              Giữ kỹ năng <strong>E</strong> để sạc vòng hồi máu.
+            <p class="text-sm text-white/70">
+              Giữ kỹ năng <strong class="text-sage-light">E</strong> để sạc vòng hồi máu.
             </p>
           </article>
 
-          <article class="stage__panel stage__panel--messages" aria-labelledby="messages-title">
-            <h3 id="messages-title">Lời chúc đã mở khoá</h3>
-            <div class="messages" id="messages" role="list"></div>
+          <article
+            class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_32px_70px_rgba(0,0,0,0.45)] lg:col-span-6"
+            aria-labelledby="messages-title"
+          >
+            <h3 class="font-orbitron text-sm uppercase tracking-[0.3em] text-white/80" id="messages-title">Lời chúc đã mở khoá</h3>
+            <div class="mt-4 grid gap-4" id="messages" role="list"></div>
           </article>
 
-          <article class="stage__panel stage__panel--skills" aria-labelledby="skills-title">
-            <h3 id="skills-title">Kỹ năng Sage</h3>
-            <div class="skills">
-              <button class="skill" id="skill-barrier" data-skill="C">
-                <span class="skill__badge">C</span>
-                <span class="skill__label">Barrier Orb</span>
-              </button>
-              <button class="skill" id="skill-slow" data-skill="Q">
-                <span class="skill__badge">Q</span>
-                <span class="skill__label">Slow Orb</span>
-              </button>
-              <button class="skill" id="skill-heal" data-skill="E">
-                <span class="skill__badge">E</span>
-                <span class="skill__label">Healing Orb</span>
-              </button>
-              <button class="skill" id="skill-revive" data-skill="X">
-                <span class="skill__badge">X</span>
-                <span class="skill__label">Resurrection</span>
-              </button>
+          <article
+            class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-[0_20px_45px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_32px_70px_rgba(0,0,0,0.45)] lg:col-span-6"
+            aria-labelledby="skills-title"
+          >
+            <h3 class="font-orbitron text-sm uppercase tracking-[0.3em] text-white/80" id="skills-title">Kỹ năng Sage</h3>
+            <div class="atropos skills-atropos mt-4">
+              <div class="atropos-scale">
+                <div class="atropos-rotate">
+                  <div class="atropos-inner grid gap-3 sm:grid-cols-2">
+                    <button
+                      class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                      id="skill-barrier"
+                      data-skill="C"
+                      data-atropos-offset="8"
+                    >
+                      <span class="skill__badge flex h-12 w-12 items-center justify-center rounded-xl bg-sage-light/25 font-orbitron text-lg text-sage-light transition duration-300">C</span>
+                      <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Barrier Orb</span>
+                    </button>
+                    <button
+                      class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                      id="skill-slow"
+                      data-skill="Q"
+                      data-atropos-offset="6"
+                    >
+                      <span class="skill__badge flex h-12 w-12 items-center justify-center rounded-xl bg-sage-light/25 font-orbitron text-lg text-sage-light transition duration-300">Q</span>
+                      <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Slow Orb</span>
+                    </button>
+                    <button
+                      class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                      id="skill-heal"
+                      data-skill="E"
+                      data-atropos-offset="10"
+                    >
+                      <span class="skill__badge flex h-12 w-12 items-center justify-center rounded-xl bg-sage-light/25 font-orbitron text-lg text-sage-light transition duration-300">E</span>
+                      <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Healing Orb</span>
+                    </button>
+                    <button
+                      class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                      id="skill-revive"
+                      data-skill="X"
+                      data-atropos-offset="7"
+                    >
+                      <span class="skill__badge flex h-12 w-12 items-center justify-center rounded-xl bg-sage-light/25 font-orbitron text-lg text-sage-light transition duration-300">X</span>
+                      <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Resurrection</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="skill-effects" aria-hidden="true">
               <div id="barrier-field" class="barrier-field"></div>
@@ -107,7 +251,12 @@
             <form id="code-form">
               <label for="protocol-code" class="sr-only">Nhập mã</label>
               <input id="protocol-code" name="protocol-code" type="text" placeholder="Nhập tên đồng đội" autocomplete="off" />
-              <button class="btn" type="submit">Unlock</button>
+              <button
+                class="inline-flex items-center justify-center rounded-full border border-sage-light/60 px-6 py-2 text-sm font-semibold text-white/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(122,214,199,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115]"
+                type="submit"
+              >
+                Unlock
+              </button>
             </form>
             <div id="secret-letter" class="secret-letter" hidden>
               <h4>ACCESS GRANTED</h4>
@@ -161,14 +310,25 @@
           <img src="assets/memory-shards.svg" alt="Kỷ niệm hồi sinh" />
           <figcaption>Khoảnh khắc đội hình đầy đủ – cảm ơn vì luôn ở đây.</figcaption>
         </figure>
-        <button class="btn btn--primary" id="close-revive">Đã nhận buff</button>
+        <button
+          class="mt-6 inline-flex items-center justify-center rounded-full border border-transparent bg-gradient-to-r from-sage-mid to-sage-light px-8 py-3 font-semibold text-[#041111] shadow-lg shadow-sage-dark/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(10,20,25,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115]"
+          id="close-revive"
+        >
+          Đã nhận buff
+        </button>
       </div>
     </div>
 
     <template id="message-template">
-      <div class="message-card" role="listitem">
-        <div class="message-card__icon" aria-hidden="true"></div>
-        <p class="message-card__text"></p>
+      <div
+        class="message-card flex items-center gap-3 rounded-2xl border border-sage-light/40 bg-[#041919]/60 px-5 py-4 opacity-0"
+        role="listitem"
+      >
+        <div
+          class="message-card__icon relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-sage-light/30 to-transparent"
+          aria-hidden="true"
+        ></div>
+        <p class="message-card__text text-sm text-white/80"></p>
       </div>
     </template>
 
