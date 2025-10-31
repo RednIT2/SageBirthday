@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-labelledby="title desc">
+  <title id="title">Valorant healer inspired chibi</title>
+  <desc id="desc">Friendly chibi style guardian with teal robes, floating heal orbs, and stylized hair buns.</desc>
+  <defs>
+    <linearGradient id="robeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7ad6c7" />
+      <stop offset="100%" stop-color="#2a7f76" />
+    </linearGradient>
+    <linearGradient id="orbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b5fff6" />
+      <stop offset="100%" stop-color="#4ab6a9" />
+    </linearGradient>
+    <filter id="orbGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="240" height="320" fill="none" rx="24" />
+  <g transform="translate(20 12)">
+    <ellipse cx="100" cy="260" rx="78" ry="26" fill="#081216" opacity="0.4" />
+    <g id="body" transform="translate(20 40)">
+      <path
+        d="M80 38c-16 0-30 10-32 30l-6 80c-2 22 10 40 38 40h12c28 0 40-18 38-40l-6-80c-2-20-16-30-32-30z"
+        fill="url(#robeGradient)"
+        stroke="#102826"
+        stroke-width="4"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M82 36c-10 12-42 40-42 40l10 10c8-6 18-14 32-20 14 6 24 14 32 20l10-10s-32-28-42-40z"
+        fill="#122c2d"
+        opacity="0.65"
+      />
+      <path
+        d="M70 188c-8 10-22 18-22 18 12 6 32 10 52 10s40-4 52-10c0 0-14-8-22-18"
+        fill="#0e1d1f"
+        opacity="0.45"
+      />
+      <g id="arms" fill="#f6d7c7">
+        <path d="M32 120c-6 6-10 16-10 24 0 10 8 18 18 18 10 0 18-8 18-18l-4-36-22 12z" />
+        <path d="M148 120c6 6 10 16 10 24 0 10-8 18-18 18-10 0-18-8-18-18l4-36 22 12z" />
+      </g>
+      <g id="belt">
+        <path d="M40 118h96l4 18H36z" fill="#11181c" opacity="0.75" />
+        <rect x="78" y="116" width="24" height="24" rx="6" fill="#ff4655" />
+        <circle cx="90" cy="128" r="6" fill="#ffe0e6" />
+      </g>
+    </g>
+    <g id="head" transform="translate(44)">
+      <path
+        d="M76 32c0 24-18 44-40 44S-4 56-4 32 14-12 36-12s40 20 40 44z"
+        fill="#f8e2d5"
+        stroke="#1b2d2d"
+        stroke-width="4"
+      />
+      <path
+        d="M36-22c-22 0-46 16-46 44 0 12 6 24 12 28 4-10 16-20 34-22 18 2 30 12 34 22 6-4 12-16 12-28 0-28-24-44-46-44z"
+        fill="#1a2a33"
+      />
+      <g id="bangs" fill="#0f2024">
+        <path d="M-2 4c6 6 18 6 24-2C10 0 6-8 2-18c-4 4-6 14-4 22z" />
+        <path d="M62 2c-6 6-18 6-24-2 12-2 16-10 20-20 4 4 6 14 4 22z" />
+      </g>
+      <g id="face">
+        <ellipse cx="12" cy="14" rx="8" ry="10" fill="#0f2024" />
+        <ellipse cx="60" cy="14" rx="8" ry="10" fill="#0f2024" />
+        <circle cx="14" cy="12" r="2" fill="#bff8ff" />
+        <circle cx="58" cy="12" r="2" fill="#bff8ff" />
+        <path d="M20 40c6 6 20 6 26 0" fill="none" stroke="#122c2d" stroke-width="4" stroke-linecap="round" />
+        <path d="M32 46c2 4 8 4 10 0" fill="none" stroke="#f2b8b5" stroke-width="4" stroke-linecap="round" />
+        <circle cx="4" cy="32" r="6" fill="#ffd1dd" opacity="0.75" />
+        <circle cx="68" cy="32" r="6" fill="#ffd1dd" opacity="0.75" />
+      </g>
+      <g id="hair-buns" fill="#0f2024" stroke="#1b2d2d" stroke-width="3">
+        <circle cx="-6" cy="-6" r="14" />
+        <circle cx="78" cy="-6" r="14" />
+      </g>
+      <g id="hair-ties" fill="#4ab6a9">
+        <circle cx="-2" cy="-12" r="4" />
+        <circle cx="74" cy="-12" r="4" />
+      </g>
+    </g>
+    <g id="orbs" fill="url(#orbGradient)" filter="url(#orbGlow)">
+      <circle cx="30" cy="170" r="20" opacity="0.85" />
+      <circle cx="170" cy="150" r="16" opacity="0.9" />
+      <circle cx="150" cy="220" r="14" opacity="0.75" />
+    </g>
+    <g id="staff" transform="translate(160 70)">
+      <rect x="-4" y="0" width="8" height="140" rx="4" fill="#132830" />
+      <circle cx="0" cy="-4" r="18" fill="url(#orbGradient)" filter="url(#orbGlow)" />
+      <path d="M0 40c8 4 12 14 12 26s-4 22-12 26" fill="none" stroke="#50d9cc" stroke-width="4" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>
