@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/atropos@1.0.2/atropos.min.js" defer></script>
   </head>
-  <body data-theme="night" class="font-inter antialiased min-h-screen flex justify-center transition-colors duration-500">
+  <body class="font-inter antialiased min-h-screen flex justify-center transition-colors duration-500">
     <header class="sr-only">
       <h1>Sage's Healing Birthday Protocol</h1>
     </header>
@@ -105,18 +105,6 @@
                 <div class="flex flex-wrap items-center justify-between gap-4" data-atropos-offset="6">
                   <h2 class="font-orbitron text-sm uppercase tracking-[0.35em] text-white/80" id="stage-title">Main Stage</h2>
                   <div class="flex flex-wrap items-center gap-3" data-atropos-offset="4">
-                    <label
-                      class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
-                      for="theme-toggle"
-                    >
-                      <input
-                        type="checkbox"
-                        id="theme-toggle"
-                        aria-label="Đổi chế độ ngày/đêm"
-                        class="accent-[#7ad6c7]"
-                      />
-                      <span>Night / Day</span>
-                    </label>
                     <label
                       class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
                       for="audio-toggle"
@@ -275,10 +263,6 @@
                       </p>
                     </div>
                   </div>
-                  <aside class="easter__night" aria-live="polite">
-                    <h3>Chế độ Night/Day</h3>
-                    <p>Đổi ánh sáng để phù hợp với mood của bạn. Tông màu và hiệu ứng sẽ thay đổi ngay.</p>
-                  </aside>
                 </section>
 
                 <section class="minigame" aria-labelledby="minigame-title" data-atropos-offset="4">

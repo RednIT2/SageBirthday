@@ -4,7 +4,6 @@
   --sage-dark: #1b4e4a;
   --valorant-red: #ff4655;
   --night-bg: #0f1115;
-  --day-bg: #f3f5f7;
   --glass: rgba(255, 255, 255, 0.12);
   --glass-border: rgba(122, 214, 199, 0.35);
   --text-primary: #f6f8f9;
@@ -12,14 +11,6 @@
   --card-radius: 18px;
   --transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-soft: 0 24px 60px rgba(10, 20, 25, 0.35);
-}
-
-body[data-theme='day'] {
-  --night-bg: #f3f5f7;
-  --text-primary: #0f1115;
-  --text-secondary: rgba(15, 17, 21, 0.7);
-  --glass: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(74, 182, 169, 0.35);
 }
 
 html {
@@ -33,11 +24,6 @@ body {
   background-image: radial-gradient(circle at top left, rgba(122, 214, 199, 0.25), transparent 50%),
     radial-gradient(circle at bottom right, rgba(74, 182, 169, 0.2), transparent 55%);
   transition: background 600ms ease, color var(--transition);
-}
-
-body[data-theme='day'] {
-  background-image: radial-gradient(circle at top left, rgba(10, 50, 60, 0.08), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(255, 70, 85, 0.12), transparent 60%);
 }
 
 .hero--exit {
