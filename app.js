@@ -41,6 +41,9 @@ const state = {
   },
 };
 
+let heroAtropos = null;
+let skillsAtropos = null;
+
 const smallMessages = [
   'Hôm nay phải cười 200% nhé!',
   'Buff may mắn suốt năm!',
@@ -268,6 +271,11 @@ audioToggle?.addEventListener('change', () => {
 motionToggle?.addEventListener('change', () => {
   state.reduceMotion = motionToggle.checked;
   document.body.dataset.reduceMotion = state.reduceMotion ? 'true' : 'false';
+  if (state.reduceMotion) {
+    destroyAtropos();
+  } else {
+    initAtropos();
+  }
 });
 
 codeForm?.addEventListener('submit', (event) => {
@@ -350,6 +358,39 @@ cracks.forEach((crack) => {
   crack.addEventListener('drop', handleDrop);
 });
 
+function initAtropos() {
+  if (typeof Atropos !== 'function' || state.reduceMotion) return;
+  if (!heroAtropos) {
+    heroAtropos = Atropos({
+      el: '.hero-atropos',
+      activeOffset: 36,
+      rotateXMax: 12,
+      rotateYMax: 12,
+      shadow: false,
+    });
+  }
+  if (!skillsAtropos) {
+    skillsAtropos = Atropos({
+      el: '.skills-atropos',
+      activeOffset: 28,
+      rotateXMax: 10,
+      rotateYMax: 10,
+      shadow: false,
+    });
+  }
+}
+
+function destroyAtropos() {
+  if (heroAtropos) {
+    heroAtropos.destroy();
+    heroAtropos = null;
+  }
+  if (skillsAtropos) {
+    skillsAtropos.destroy();
+    skillsAtropos = null;
+  }
+}
+
 // Accessibility: close modal with Escape
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && !reviveModal.hidden) {
@@ -358,7 +399,11 @@ window.addEventListener('keydown', (event) => {
 });
 
 // Prefers reduced motion default
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (motionToggle && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   motionToggle.checked = true;
   motionToggle.dispatchEvent(new Event('change'));
+}
+
+if (!state.reduceMotion) {
+  initAtropos();
 }
