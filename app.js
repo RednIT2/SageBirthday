@@ -18,7 +18,6 @@ const codeForm = document.getElementById('code-form');
 const protocolCodeInput = document.getElementById('protocol-code');
 const secretLetter = document.getElementById('secret-letter');
 const birthdayName = document.getElementById('birthday-name');
-const themeToggle = document.getElementById('theme-toggle');
 const audioToggle = document.getElementById('audio-toggle');
 const motionToggle = document.getElementById('motion-toggle');
 const cake = document.getElementById('cake');
@@ -259,10 +258,6 @@ reviveModal?.addEventListener('click', (event) => {
   if (event.target === reviveModal) {
     reviveModal.hidden = true;
   }
-});
-
-themeToggle?.addEventListener('change', () => {
-  document.body.dataset.theme = themeToggle.checked ? 'day' : 'night';
 });
 
 audioToggle?.addEventListener('change', () => {
