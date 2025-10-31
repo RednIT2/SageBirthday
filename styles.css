@@ -38,26 +38,27 @@
 
 
 .avatar-chibi {
-  width: clamp(220px, 42vw, 260px);
-  max-width: 260px;
+  width: clamp(200px, 36vw, 245px);
+  max-width: 245px;
+  aspect-ratio: 13 / 14;
   display: block;
   box-sizing: border-box;
-  padding: 1.25rem;
-  border-radius: 32px;
-  background: radial-gradient(circle at 30% 20%, rgba(122, 214, 199, 0.2), transparent 65%),
-    rgba(9, 23, 30, 0.65);
-  border: 1px solid rgba(122, 214, 199, 0.35);
-  transform-origin: center 92%;
-  filter: drop-shadow(0 24px 32px rgba(6, 12, 18, 0.55)) drop-shadow(0 0 22px rgba(122, 214, 199, 0.35));
+  padding: 1.1rem 1.35rem;
+  border-radius: 30px;
+  background: radial-gradient(circle at 32% 24%, rgba(122, 214, 199, 0.26), transparent 68%),
+    rgba(6, 18, 24, 0.72);
+  border: 1px solid rgba(122, 214, 199, 0.4);
+  transform-origin: center 90%;
+  filter: drop-shadow(0 22px 30px rgba(5, 12, 18, 0.55)) drop-shadow(0 0 20px rgba(122, 214, 199, 0.4));
   transition: transform var(--transition), filter var(--transition), background var(--transition), border-color var(--transition);
 }
 
 .avatar-chibi:hover {
-  transform: translateY(-6px) scale(1.02);
-  border-color: rgba(122, 214, 199, 0.55);
-  background: radial-gradient(circle at 28% 18%, rgba(122, 214, 199, 0.32), transparent 68%),
-    rgba(9, 23, 30, 0.75);
-  filter: drop-shadow(0 32px 42px rgba(6, 12, 18, 0.65)) drop-shadow(0 0 28px rgba(122, 214, 199, 0.55));
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(122, 214, 199, 0.6);
+  background: radial-gradient(circle at 30% 20%, rgba(122, 214, 199, 0.36), transparent 70%),
+    rgba(6, 18, 24, 0.82);
+  filter: drop-shadow(0 30px 42px rgba(5, 12, 18, 0.65)) drop-shadow(0 0 28px rgba(122, 214, 199, 0.55));
 }
 
 
