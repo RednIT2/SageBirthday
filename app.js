@@ -42,6 +42,7 @@ const state = {
 };
 
 let heroAtropos = null;
+let stageAtropos = null;
 let skillsAtropos = null;
 
 const smallMessages = [
@@ -360,22 +361,45 @@ cracks.forEach((crack) => {
 
 function initAtropos() {
   if (typeof Atropos !== 'function' || state.reduceMotion) return;
-  if (!heroAtropos) {
+
+  const heroEl = document.querySelector('.atropos-hero');
+  if (heroEl && !heroAtropos) {
     heroAtropos = Atropos({
-      el: '.hero-atropos',
-      activeOffset: 36,
-      rotateXMax: 12,
-      rotateYMax: 12,
-      shadow: false,
+      el: heroEl,
+      activeOffset: 32,
+      rotateXMax: 14,
+      rotateYMax: 18,
+      shadow: true,
+      shadowScale: 1.04,
+      shadowOffset: 24,
+      highlight: false,
+      clickable: true,
     });
   }
-  if (!skillsAtropos) {
+
+  const stageEl = document.querySelector('.atropos-stage');
+  if (stageEl && !stageAtropos) {
+    stageAtropos = Atropos({
+      el: stageEl,
+      activeOffset: 18,
+      rotateXMax: 8,
+      rotateYMax: 10,
+      shadow: false,
+      highlight: false,
+      clickable: true,
+    });
+  }
+
+  const skillsEl = document.querySelector('.skills-atropos');
+  if (skillsEl && !skillsAtropos) {
     skillsAtropos = Atropos({
-      el: '.skills-atropos',
-      activeOffset: 28,
+      el: skillsEl,
+      activeOffset: 14,
       rotateXMax: 10,
       rotateYMax: 10,
       shadow: false,
+      highlight: false,
+      clickable: true,
     });
   }
 }
@@ -384,6 +408,10 @@ function destroyAtropos() {
   if (heroAtropos) {
     heroAtropos.destroy();
     heroAtropos = null;
+  }
+  if (stageAtropos) {
+    stageAtropos.destroy();
+    stageAtropos = null;
   }
   if (skillsAtropos) {
     skillsAtropos.destroy();
