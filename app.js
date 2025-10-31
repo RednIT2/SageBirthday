@@ -42,7 +42,27 @@ const state = {
 
 let heroAtropos = null;
 let stageAtropos = null;
-let skillsAtropos = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  heroAtropos = Atropos({
+    el: '.atropos-hero',
+    activeOffset: 28,
+    shadow: true,
+    highlight: true,
+    clickable: true,
+  });
+});
+
+function initStageAtropos() {
+  if (stageAtropos) return;
+  stageAtropos = Atropos({
+    el: '.atropos-stage',
+    activeOffset: 22,
+    shadow: true,
+    highlight: true,
+    clickable: true,
+  });
+}
 
 const smallMessages = [
   'Hôm nay phải cười 200% nhé!',
@@ -57,6 +77,14 @@ beginBtn?.addEventListener('click', () => {
   setTimeout(() => {
     heroSection.hidden = true;
     stage.hidden = false;
+    if (heroAtropos?.destroy) {
+      heroAtropos.destroy();
+      heroAtropos = null;
+    }
+    initStageAtropos();
+    if (stageAtropos?.refresh) {
+      stageAtropos.refresh();
+    }
     stage.focus?.();
   }, 650);
 });

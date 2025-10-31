@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,10 +33,12 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/atropos@1.0.2/atropos.css" />
-    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/atropos@1.0.2/atropos.min.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="font-inter antialiased min-h-screen flex justify-center transition-colors duration-500">
+  <body
+    class="m-0 font-inter antialiased min-h-screen flex justify-center bg-[#0f1115] text-[#f6f8f9] transition-colors duration-500 [background-image:radial-gradient(circle_at_top_left,rgba(122,214,199,0.25),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(74,182,169,0.2),transparent_55%)]"
+  >
     <header class="sr-only">
       <h1>Sage's Healing Birthday Protocol</h1>
     </header>
@@ -46,46 +48,48 @@
       aria-live="polite"
     >
       <section
-        class="hero relative min-h-[70vh] md:min-h-[85vh] overflow-hidden rounded-[2.75rem] bg-gradient-to-br from-[#0f1115]/95 via-[#132328]/90 to-[#4ab6a9]/45 shadow-valorant transition-all duration-700 ease-out"
+        class="atropos atropos-hero relative min-h-[70vh] w-full overflow-hidden rounded-[2.75rem] bg-gradient-to-br from-[#0f1115]/95 via-[#132328]/90 to-[#4ab6a9]/45 shadow-valorant transition-all duration-700 ease-out md:min-h-[85vh]"
         id="hero"
         aria-labelledby="hero-title"
       >
-        <div class="absolute inset-0 bg-gradient-to-tr from-[#ff4655]/30 via-transparent to-[#7ad6c7]/40 mix-blend-screen opacity-80"></div>
-        <div class="atropos atropos-hero relative z-10 w-full px-6 sm:px-10">
-          <div class="atropos-scale">
-            <div class="atropos-rotate">
-              <div class="atropos-inner relative flex flex-col items-center gap-6 py-16 text-center">
-                <div aria-hidden="true" class="pointer-events-none absolute inset-0">
-                  <div
-                    class="absolute top-10 left-8 h-48 w-40 -skew-y-12 rounded-[2.5rem] bg-gradient-to-br from-[#7ad6c7]/40 to-transparent blur-sm"
-                    data-atropos-offset="-6"
-                  ></div>
-                  <div
-                    class="absolute bottom-14 right-10 h-56 w-48 -skew-y-12 rounded-[2.5rem] bg-gradient-to-br from-[#0f1115]/60 via-transparent to-[#7ad6c7]/35 blur-sm"
-                    data-atropos-offset="-4"
-                  ></div>
-                </div>
-                <span
-                  class="inline-flex items-center justify-center px-5 py-1.5 text-xs font-orbitron tracking-[0.3em] uppercase border border-white/20 rounded-full bg-black/40 text-white/80"
-                  data-atropos-offset="6"
-                >
-                  SAGE // BIRTHDAY PROTOCOL
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-semibold leading-tight" id="hero-title" data-atropos-offset="8">
-                  Chào mừng đến với trạm hồi máu sinh nhật
-                </h2>
-                <p class="max-w-xl text-base text-white/80" data-atropos-offset="4">
-                  Kích hoạt giao thức để Sage chữa lành toàn bộ ngày đặc biệt này.
-                </p>
-                <button
-                  id="begin-btn"
-                  class="group inline-flex items-center justify-center rounded-full border border-transparent bg-gradient-to-r from-sage-mid to-sage-light px-10 py-3 font-semibold text-[#041111] shadow-lg shadow-sage-dark/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(10,20,25,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115]"
-                  aria-controls="main-stage"
-                  data-atropos-offset="10"
-                >
-                  Begin Protocol
-                </button>
+        <div class="atropos-scale">
+          <div class="atropos-rotate">
+            <div class="atropos-inner relative flex min-h-[70vh] w-full flex-col items-center justify-center gap-6 px-6 py-16 text-center sm:px-10">
+              <div
+                aria-hidden="true"
+                class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#ff4655]/30 via-transparent to-[#7ad6c7]/40 mix-blend-screen opacity-80"
+                data-atropos-offset="-4"
+              ></div>
+              <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+                <div
+                  class="absolute top-10 left-8 h-48 w-40 -skew-y-12 rounded-[2.5rem] bg-gradient-to-br from-[#7ad6c7]/40 to-transparent blur-sm"
+                  data-atropos-offset="-8"
+                ></div>
+                <div
+                  class="absolute bottom-14 right-10 h-56 w-48 -skew-y-12 rounded-[2.5rem] bg-gradient-to-br from-[#0f1115]/60 via-transparent to-[#7ad6c7]/35 blur-sm"
+                  data-atropos-offset="-2"
+                ></div>
               </div>
+              <span
+                class="inline-flex items-center justify-center rounded-full border border-white/20 bg-black/40 px-5 py-1.5 font-orbitron text-xs uppercase tracking-[0.3em] text-white/80"
+                data-atropos-offset="6"
+              >
+                SAGE // BIRTHDAY PROTOCOL
+              </span>
+              <h2 class="text-3xl font-semibold leading-tight sm:text-4xl" id="hero-title" data-atropos-offset="8">
+                Chào mừng đến với trạm hồi máu sinh nhật
+              </h2>
+              <p class="max-w-xl text-base text-white/80" data-atropos-offset="4">
+                Kích hoạt giao thức để Sage chữa lành toàn bộ ngày đặc biệt này.
+              </p>
+              <button
+                id="begin-btn"
+                class="group pointer-events-auto inline-flex items-center justify-center rounded-full border border-transparent bg-gradient-to-r from-sage-mid to-sage-light px-10 py-3 font-semibold text-[#041111] shadow-lg shadow-sage-dark/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(10,20,25,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115]"
+                aria-controls="main-stage"
+                data-atropos-offset="10"
+              >
+                Begin Protocol
+              </button>
             </div>
           </div>
         </div>
@@ -93,20 +97,19 @@
 
       <section
         id="main-stage"
-        class="focus:outline-none"
+        class="atropos atropos-stage focus:outline-none"
         hidden
         aria-labelledby="stage-title"
         tabindex="-1"
       >
-        <div class="atropos atropos-stage w-full">
-          <div class="atropos-scale">
-            <div class="atropos-rotate">
-              <div class="atropos-inner grid gap-8 animate-[fadeUp_0.7s_ease_forwards]">
+        <div class="atropos-scale">
+          <div class="atropos-rotate">
+            <div class="atropos-inner grid w-full gap-8 rounded-[2.5rem] bg-[#071013]/70 p-6 shadow-valorant backdrop-blur-xl animate-[fadeUp_0.7s_ease_forwards] sm:p-10 lg:p-12">
                 <div class="flex flex-wrap items-center justify-between gap-4" data-atropos-offset="6">
                   <h2 class="font-orbitron text-sm uppercase tracking-[0.35em] text-white/80" id="stage-title">Main Stage</h2>
                   <div class="flex flex-wrap items-center gap-3" data-atropos-offset="4">
                     <label
-                      class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
+                      class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60 pointer-events-auto"
                       for="audio-toggle"
                     >
                       <input
@@ -119,7 +122,7 @@
                       <span>Âm thanh</span>
                     </label>
                     <label
-                      class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60"
+                      class="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white/70 transition hover:border-sage-light/50 focus-within:border-sage-light/60 pointer-events-auto"
                       for="motion-toggle"
                     >
                       <input
@@ -195,7 +198,7 @@
                         <div class="atropos-rotate">
                           <div class="atropos-inner grid gap-3 sm:grid-cols-2">
                             <button
-                              class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                              class="skill group pointer-events-auto relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
                               id="skill-barrier"
                               data-skill="C"
                               data-atropos-offset="8"
@@ -204,7 +207,7 @@
                               <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Barrier Orb</span>
                             </button>
                             <button
-                              class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                              class="skill group pointer-events-auto relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
                               id="skill-slow"
                               data-skill="Q"
                               data-atropos-offset="6"
@@ -213,7 +216,7 @@
                               <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Slow Orb</span>
                             </button>
                             <button
-                              class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                              class="skill group pointer-events-auto relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
                               id="skill-heal"
                               data-skill="E"
                               data-atropos-offset="10"
@@ -222,7 +225,7 @@
                               <span class="skill__label block text-sm font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors duration-300">Healing Orb</span>
                             </button>
                             <button
-                              class="skill group relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
+                              class="skill group pointer-events-auto relative isolate overflow-hidden rounded-2xl border border-sage-light/40 bg-[#0a1920]/60 p-4 text-left text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#071013]"
                               id="skill-revive"
                               data-skill="X"
                               data-atropos-offset="7"
@@ -249,7 +252,7 @@
                       <label for="protocol-code" class="sr-only">Nhập mã</label>
                       <input id="protocol-code" name="protocol-code" type="text" placeholder="Nhập tên đồng đội" autocomplete="off" />
                       <button
-                        class="inline-flex items-center justify-center rounded-full border border-sage-light/60 px-6 py-2 text-sm font-semibold text-white/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(122,214,199,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115]"
+                        class="inline-flex items-center justify-center rounded-full border border-sage-light/60 px-6 py-2 text-sm font-semibold text-white/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(122,214,199,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115] pointer-events-auto"
                         type="submit"
                       >
                         Unlock
