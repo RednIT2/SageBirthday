@@ -177,41 +177,6 @@
   animation: fireworkBurst 1.2s ease-out forwards;
 }
 
-.easter,
-.minigame {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  background: rgba(5, 18, 24, 0.45);
-  padding: 1.75rem;
-  border-radius: calc(var(--card-radius) * 1.2);
-  border: 1px solid rgba(122, 214, 199, 0.25);
-  backdrop-filter: blur(20px);
-}
-
-.easter form {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-.easter input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(122, 214, 199, 0.35);
-  background: rgba(0, 0, 0, 0.2);
-  color: inherit;
-}
-
-.secret-letter {
-  margin-top: 1rem;
-  padding: 1.25rem;
-  background: rgba(122, 214, 199, 0.12);
-  border-radius: calc(var(--card-radius) * 0.8);
-  border: 1px solid rgba(122, 214, 199, 0.35);
-}
-
 .cake {
   position: relative;
   height: 240px;
@@ -298,13 +263,6 @@
   cursor: default;
   box-shadow: 0 0 24px rgba(122, 214, 199, 0.65);
   pointer-events: none;
-}
-
-.minigame__result {
-  min-height: 2.5rem;
-  margin-top: 1rem;
-  font-weight: 600;
-  color: var(--sage-light);
 }
 
 .modal {

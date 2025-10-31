@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -31,9 +32,8 @@
         },
       };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/atropos@1.0.2/atropos.css" />
-    <script src="https://unpkg.com/atropos@1.0.2/atropos.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/atropos@1.0.2/css/atropos.min.css" />
+    <script src="https://unpkg.com/atropos@1.0.2/js/atropos.min.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body
@@ -244,13 +244,28 @@
                   </article>
                 </section>
 
-                <section class="easter" aria-labelledby="easter-title" data-atropos-offset="6">
-                  <div>
-                    <h3 id="easter-title">Protocol Code</h3>
-                    <p>Nhập tên mật mã để mở thư ẩn.</p>
-                    <form id="code-form">
+                <section
+                  class="grid gap-4 rounded-3xl border border-sage-light/25 bg-[rgba(5,18,24,0.45)] p-6 shadow-[0_20px_45px_rgba(0,0,0,0.35)] backdrop-blur-xl transition sm:p-8"
+                  aria-labelledby="easter-title"
+                  data-atropos-offset="6"
+                >
+                  <div class="space-y-4">
+                    <div class="space-y-2">
+                      <h3 id="easter-title" class="font-orbitron text-sm uppercase tracking-[0.3em] text-white/80">
+                        Protocol Code
+                      </h3>
+                      <p class="text-sm text-white/70">Nhập tên mật mã để mở thư ẩn.</p>
+                    </div>
+                    <form id="code-form" class="flex flex-col gap-3 sm:flex-row sm:items-center">
                       <label for="protocol-code" class="sr-only">Nhập mã</label>
-                      <input id="protocol-code" name="protocol-code" type="text" placeholder="Nhập tên đồng đội" autocomplete="off" />
+                      <input
+                        id="protocol-code"
+                        name="protocol-code"
+                        type="text"
+                        placeholder="Nhập tên đồng đội"
+                        autocomplete="off"
+                        class="flex-1 rounded-full border border-sage-light/40 bg-black/40 px-4 py-3 text-sm text-white/80 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-sage-light/60 focus:ring-offset-2 focus:ring-offset-[#071013]"
+                      />
                       <button
                         class="inline-flex items-center justify-center rounded-full border border-sage-light/60 px-6 py-2 text-sm font-semibold text-white/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(122,214,199,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1115] pointer-events-auto"
                         type="submit"
@@ -258,8 +273,12 @@
                         Unlock
                       </button>
                     </form>
-                    <div id="secret-letter" class="secret-letter" hidden>
-                      <h4>ACCESS GRANTED</h4>
+                    <div
+                      id="secret-letter"
+                      class="rounded-2xl border border-sage-light/40 bg-sage-light/15 p-5 text-sm text-white/85 shadow-inner shadow-black/30"
+                      hidden
+                    >
+                      <h4 class="font-semibold text-sage-light">ACCESS GRANTED</h4>
                       <p>
                         Cám ơn vì đã là người đồng đội tuyệt nhất. Happy level-up day!<br />
                         Hẹn bạn trong mọi trận đấu với full buff may mắn.
@@ -268,7 +287,11 @@
                   </div>
                 </section>
 
-                <section class="minigame" aria-labelledby="minigame-title" data-atropos-offset="4">
+                <section
+                  class="grid gap-6 rounded-3xl border border-sage-light/25 bg-[rgba(5,18,24,0.45)] p-6 shadow-[0_20px_45px_rgba(0,0,0,0.35)] backdrop-blur-xl transition [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))] sm:p-8"
+                  aria-labelledby="minigame-title"
+                  data-atropos-offset="4"
+                >
                   <div>
                     <h3 id="minigame-title">Mini-game: Heal the Cake</h3>
                     <p> Kéo thả 5 Healing Orbs vào đúng vết nứt để hồi phục chiếc bánh sinh nhật.</p>
@@ -287,9 +310,13 @@
                       <button class="orb" draggable="true" data-orb="4" aria-label="Orb 4"></button>
                       <button class="orb" draggable="true" data-orb="5" aria-label="Orb 5"></button>
                     </div>
-                    <div id="minigame-result" class="minigame__result" aria-live="polite"></div>
+                    <div
+                      id="minigame-result"
+                      class="mt-4 min-h-[2.5rem] font-semibold text-sage-light"
+                      aria-live="polite"
+                    ></div>
                   </div>
-                  <aside class="minigame__aside">
+                  <aside class="rounded-2xl border border-white/10 bg-black/30 p-5 text-sm text-white/70">
                     <p>Mẹo: hãy để ý ánh sáng xanh dịu—đó là nơi chiếc bánh cần heal.</p>
                   </aside>
                 </section>
