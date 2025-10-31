@@ -1,0 +1,25 @@
+<svg width="400" height="260" viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memoryTitle memoryDesc">
+  <title id="memoryTitle">Memory shards abstract art</title>
+  <desc id="memoryDesc">Abstract shards inspired by Valorant style</desc>
+  <defs>
+    <linearGradient id="bg" x1="40" y1="220" x2="360" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1115" />
+      <stop offset="1" stop-color="#1B4E4A" />
+    </linearGradient>
+    <linearGradient id="accent" x1="80" y1="210" x2="200" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AD6C7" stop-opacity="0.25" />
+      <stop offset="1" stop-color="#7AD6C7" stop-opacity="0.75" />
+    </linearGradient>
+    <linearGradient id="shard" x1="260" y1="220" x2="340" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4655" stop-opacity="0.4" />
+      <stop offset="1" stop-color="#FF4655" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="376" height="236" rx="28" fill="url(#bg)" stroke="rgba(122,214,199,0.35)" stroke-width="2" />
+  <path d="M84 200L140 60L220 210L84 200Z" fill="url(#accent)" opacity="0.8" />
+  <path d="M240 220L320 80L356 196L240 220Z" fill="url(#shard)" opacity="0.7" />
+  <path d="M120 120L180 80L196 132L120 120Z" fill="#4AB6A9" opacity="0.6" />
+  <path d="M260 140L308 108L320 156L260 140Z" fill="#F3F5F7" opacity="0.35" />
+  <circle cx="200" cy="60" r="14" fill="#7AD6C7" opacity="0.6" />
+  <circle cx="320" cy="98" r="10" fill="#FF4655" opacity="0.6" />
+</svg>

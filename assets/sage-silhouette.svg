@@ -1,0 +1,17 @@
+<svg width="320" height="480" viewBox="0 0 320 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Sage inspired silhouette</title>
+  <desc id="desc">Abstract silhouette of Sage with bun hair and flowing cloak</desc>
+  <defs>
+    <linearGradient id="cloak" x1="40" y1="420" x2="280" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1115" />
+      <stop offset="1" stop-color="#4AB6A9" stop-opacity="0.75" />
+    </linearGradient>
+    <linearGradient id="inner" x1="160" y1="440" x2="160" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AD6C7" stop-opacity="0.05" />
+      <stop offset="1" stop-color="#7AD6C7" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+  <path d="M92 120C96 88 126 64 160 64C194 64 222 88 228 120L240 188C244 208 248 226 260 244C276 268 284 296 280 324C272 380 220 420 160 420C100 420 48 380 40 324C36 296 44 268 60 244C72 226 76 208 80 188L92 120Z" fill="url(#cloak)" />
+  <path d="M160 52C144 52 130 40 130 24C130 11 142 0 160 0C178 0 190 11 190 24C190 40 176 52 160 52Z" fill="#7AD6C7" />
+  <path d="M160 120C198 120 228 146 228 178C228 204 206 222 180 236C160 246 160 268 160 268C160 268 160 246 140 236C114 222 92 204 92 178C92 146 122 120 160 120Z" fill="url(#inner)" />
+</svg>
