@@ -44,6 +44,7 @@ let heroAtropos = null;
 let stageAtropos = null;
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof Atropos !== 'function') return;
   heroAtropos = Atropos({
     el: '.atropos-hero',
     activeOffset: 28,
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initStageAtropos() {
-  if (stageAtropos) return;
+  if (stageAtropos || typeof Atropos !== 'function') return;
   stageAtropos = Atropos({
     el: '.atropos-stage',
     activeOffset: 22,
