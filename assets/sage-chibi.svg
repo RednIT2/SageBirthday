@@ -1,97 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-labelledby="title desc">
-  <title id="title">Valorant healer inspired chibi</title>
-  <desc id="desc">Friendly chibi style guardian with teal robes, floating heal orbs, and stylized hair buns.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Sage themed chibi</title>
+  <desc id="desc">Illustration of a cheerful healer with teal aura holding a glowing orb.</desc>
   <defs>
-    <linearGradient id="robeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7ad6c7" />
-      <stop offset="100%" stop-color="#2a7f76" />
+    <linearGradient id="robe" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2c7870" />
+      <stop offset="100%" stop-color="#143c37" />
     </linearGradient>
-    <linearGradient id="orbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#b5fff6" />
-      <stop offset="100%" stop-color="#4ab6a9" />
+    <linearGradient id="hair" x1="0" x2="1" y1="0.1" y2="1">
+      <stop offset="0%" stop-color="#133947" />
+      <stop offset="100%" stop-color="#051e2a" />
     </linearGradient>
-    <filter id="orbGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+    <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#c9fff4" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#6ee9d7" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
   </defs>
-  <rect width="240" height="320" fill="none" rx="24" />
-  <g transform="translate(20 12)">
-    <ellipse cx="100" cy="260" rx="78" ry="26" fill="#081216" opacity="0.4" />
-    <g id="body" transform="translate(20 40)">
-      <path
-        d="M80 38c-16 0-30 10-32 30l-6 80c-2 22 10 40 38 40h12c28 0 40-18 38-40l-6-80c-2-20-16-30-32-30z"
-        fill="url(#robeGradient)"
-        stroke="#102826"
-        stroke-width="4"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M82 36c-10 12-42 40-42 40l10 10c8-6 18-14 32-20 14 6 24 14 32 20l10-10s-32-28-42-40z"
-        fill="#122c2d"
-        opacity="0.65"
-      />
-      <path
-        d="M70 188c-8 10-22 18-22 18 12 6 32 10 52 10s40-4 52-10c0 0-14-8-22-18"
-        fill="#0e1d1f"
-        opacity="0.45"
-      />
-      <g id="arms" fill="#f6d7c7">
-        <path d="M32 120c-6 6-10 16-10 24 0 10 8 18 18 18 10 0 18-8 18-18l-4-36-22 12z" />
-        <path d="M148 120c6 6 10 16 10 24 0 10-8 18-18 18-10 0-18-8-18-18l4-36 22 12z" />
+  <g fill="none" stroke="none" stroke-width="0">
+    <ellipse cx="120" cy="232" rx="70" ry="18" fill="rgba(9, 25, 32, 0.55)" />
+    <g transform="translate(32 18)">
+      <path d="M88 28c-26 0-46 21-46 50s14 46 46 46 46-17 46-46S114 28 88 28z" fill="url(#hair)" />
+      <path d="M42 84c3 28 20 40 46 40s43-12 46-40c-12-6-24-10-46-10s-34 4-46 10z" fill="#f2dcd1" />
+      <path d="M60 142c0-20 12-34 28-34s28 14 28 34" fill="#f2dcd1" />
+      <path d="M32 160c6-20 18-34 56-34s50 14 56 34l-28 40H60z" fill="url(#robe)" />
+      <path d="M44 168c-4 14-4 30 6 46l24-2-6-24 18-22-18-20z" fill="#1c5f58" />
+      <path d="M132 168c4 14 4 30-6 46l-24-2 6-24-18-22 18-20z" fill="#1c5f58" />
+      <path d="M74 102c0 6-3 12-10 12s-12-6-12-12" stroke="#133947" stroke-width="5" stroke-linecap="round" />
+      <path d="M122 102c0 6 3 12 10 12s12-6 12-12" stroke="#133947" stroke-width="5" stroke-linecap="round" />
+      <path d="M96 132a18 18 0 0 1-24 0" stroke="#dc7f7f" stroke-width="5" stroke-linecap="round" />
+      <circle cx="72" cy="104" r="4" fill="#0d242f" />
+      <circle cx="104" cy="104" r="4" fill="#0d242f" />
+      <path d="M72 154c0 12 8 18 16 18s16-6 16-18" stroke="#f9f3ed" stroke-width="6" stroke-linecap="round" />
+      <g transform="translate(56 122)">
+        <circle cx="32" cy="32" r="32" fill="url(#orb)" filter="url(#glow)" />
+        <circle cx="32" cy="32" r="14" fill="#dffef5" opacity="0.8" />
+        <path d="M24 30c4-6 12-6 16 0" stroke="#69e7d4" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+        <path d="M20 40c8 8 16 8 24 0" stroke="#69e7d4" stroke-width="3" stroke-linecap="round" opacity="0.6" />
       </g>
-      <g id="belt">
-        <path d="M40 118h96l4 18H36z" fill="#11181c" opacity="0.75" />
-        <rect x="78" y="116" width="24" height="24" rx="6" fill="#ff4655" />
-        <circle cx="90" cy="128" r="6" fill="#ffe0e6" />
+      <path d="M30 118c-8-12-8-26 2-36 12-12 28-14 58-14s46 2 58 14c10 10 10 24 2 36-12-16-30-24-60-24s-48 8-60 24z" fill="#1f4f49" opacity="0.65" />
+      <path d="M46 58c10-8 26-12 42-12s32 4 42 12c-4-22-22-38-44-38s-40 16-40 38z" fill="#1b4440" />
+      <path d="M88 26c-16 0-28 10-30 26 8 4 18 6 30 6s22-2 30-6c-2-16-14-26-30-26z" fill="#133947" />
+      <path d="M70 206c-6 14-8 24-6 32h48c2-8 0-18-6-32z" fill="#0f2227" />
+      <path d="M46 234c0 8 8 12 18 12h48c10 0 18-4 18-12z" fill="#05161b" />
+      <g fill="#6ee9d7" opacity="0.35">
+        <circle cx="20" cy="92" r="6" />
+        <circle cx="8" cy="132" r="4" />
+        <circle cx="158" cy="96" r="6" />
+        <circle cx="172" cy="132" r="5" />
+        <circle cx="40" cy="32" r="4" />
+        <circle cx="146" cy="40" r="5" />
       </g>
-    </g>
-    <g id="head" transform="translate(44)">
-      <path
-        d="M76 32c0 24-18 44-40 44S-4 56-4 32 14-12 36-12s40 20 40 44z"
-        fill="#f8e2d5"
-        stroke="#1b2d2d"
-        stroke-width="4"
-      />
-      <path
-        d="M36-22c-22 0-46 16-46 44 0 12 6 24 12 28 4-10 16-20 34-22 18 2 30 12 34 22 6-4 12-16 12-28 0-28-24-44-46-44z"
-        fill="#1a2a33"
-      />
-      <g id="bangs" fill="#0f2024">
-        <path d="M-2 4c6 6 18 6 24-2C10 0 6-8 2-18c-4 4-6 14-4 22z" />
-        <path d="M62 2c-6 6-18 6-24-2 12-2 16-10 20-20 4 4 6 14 4 22z" />
-      </g>
-      <g id="face">
-        <ellipse cx="12" cy="14" rx="8" ry="10" fill="#0f2024" />
-        <ellipse cx="60" cy="14" rx="8" ry="10" fill="#0f2024" />
-        <circle cx="14" cy="12" r="2" fill="#bff8ff" />
-        <circle cx="58" cy="12" r="2" fill="#bff8ff" />
-        <path d="M20 40c6 6 20 6 26 0" fill="none" stroke="#122c2d" stroke-width="4" stroke-linecap="round" />
-        <path d="M32 46c2 4 8 4 10 0" fill="none" stroke="#f2b8b5" stroke-width="4" stroke-linecap="round" />
-        <circle cx="4" cy="32" r="6" fill="#ffd1dd" opacity="0.75" />
-        <circle cx="68" cy="32" r="6" fill="#ffd1dd" opacity="0.75" />
-      </g>
-      <g id="hair-buns" fill="#0f2024" stroke="#1b2d2d" stroke-width="3">
-        <circle cx="-6" cy="-6" r="14" />
-        <circle cx="78" cy="-6" r="14" />
-      </g>
-      <g id="hair-ties" fill="#4ab6a9">
-        <circle cx="-2" cy="-12" r="4" />
-        <circle cx="74" cy="-12" r="4" />
-      </g>
-    </g>
-    <g id="orbs" fill="url(#orbGradient)" filter="url(#orbGlow)">
-      <circle cx="30" cy="170" r="20" opacity="0.85" />
-      <circle cx="170" cy="150" r="16" opacity="0.9" />
-      <circle cx="150" cy="220" r="14" opacity="0.75" />
-    </g>
-    <g id="staff" transform="translate(160 70)">
-      <rect x="-4" y="0" width="8" height="140" rx="4" fill="#132830" />
-      <circle cx="0" cy="-4" r="18" fill="url(#orbGradient)" filter="url(#orbGlow)" />
-      <path d="M0 40c8 4 12 14 12 26s-4 22-12 26" fill="none" stroke="#50d9cc" stroke-width="4" stroke-linecap="round" />
     </g>
   </g>
 </svg>
