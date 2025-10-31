@@ -42,6 +42,7 @@ const state = {
 
 let heroAtropos = null;
 let stageAtropos = null;
+let skillsAtropos = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof Atropos !== 'function') return;
