@@ -38,16 +38,25 @@
 
 
 .avatar-chibi {
-  width: clamp(200px, 52%, 240px);
-  max-width: 240px;
+  width: clamp(220px, 42vw, 260px);
+  max-width: 260px;
   display: block;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  border-radius: 32px;
+  background: radial-gradient(circle at 30% 20%, rgba(122, 214, 199, 0.2), transparent 65%),
+    rgba(9, 23, 30, 0.65);
+  border: 1px solid rgba(122, 214, 199, 0.35);
   transform-origin: center 92%;
   filter: drop-shadow(0 24px 32px rgba(6, 12, 18, 0.55)) drop-shadow(0 0 22px rgba(122, 214, 199, 0.35));
-  transition: transform var(--transition), filter var(--transition);
+  transition: transform var(--transition), filter var(--transition), background var(--transition), border-color var(--transition);
 }
 
 .avatar-chibi:hover {
   transform: translateY(-6px) scale(1.02);
+  border-color: rgba(122, 214, 199, 0.55);
+  background: radial-gradient(circle at 28% 18%, rgba(122, 214, 199, 0.32), transparent 68%),
+    rgba(9, 23, 30, 0.75);
   filter: drop-shadow(0 32px 42px rgba(6, 12, 18, 0.65)) drop-shadow(0 0 28px rgba(122, 214, 199, 0.55));
 }
 
